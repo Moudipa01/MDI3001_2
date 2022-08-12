@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Resturant Website</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC">
+        <style>
+            body,
+            html {
+                height: 100%
+            }
+
+            body,
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6 {
+                font-family: "Amatic SC", sans-serif
+            }
+
+            .menu {
+                display: none
+            }
+
+            .bgimg {
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-image: url("https://www.hotfridaytalks.com/wp-content/uploads/2018/02/96ac060b-the-gourmet-bengali-thali-640x480.jpg");
+                min-height: 90%;
+            }
+        </style>
+    </head>
+<body>
+
+    <!-- Navbar (sit on top) -->
+    <div class="w3-top w3-hide-small">
+        <div class="w3-bar w3-xlarge w3-black w3-opacity w3-hover-opacity-off" id="myNavbar">
+            <a href="#" class="w3-bar-item w3-button">HOME</a>
+            <a href="#about" class="w3-bar-item w3-button">ABOUT</a>
+            <a href="#menu" class="w3-bar-item w3-button">MENU</a>
+            <a href="#table" class="w3-bar-item w3-button">BOOK A TABLE</a>
+            <a href="#myMap" class="w3-bar-item w3-button">CONTACT</a>
+        </div>
+    </div>
+
+    <!-- Header with image -->
+    <header class="bgimg w3-display-container w3-grayscale-min" id="home">
+        <div class="w3-display-bottomleft w3-padding">
+            <span class="w3-tag w3-xlarge">Open from 10am to 12pm</span>
+        </div>
+        <div class="w3-display-middle w3-center">
+            <span class="w3-text-white w3-hide-small" style="font-size:100px">The<br>BONG HUT</span>
+            <span class="w3-text-white w3-hide-large w3-hide-medium" style="font-size:60px"><b>The<br>BONG
+                    HUT</b></span>
+            <p><a href="#menu" class="w3-button w3-xxlarge w3-black">Let me see the menu</a></p>
+        </div>
+    </header>
+
+    <!-- About Container -->
+    <div class="w3-container w3-padding-64 w3-red w3-grayscale w3-xlarge" id="about">
+        <div class="w3-content">
+            <h1 class="w3-center w3-jumbo" style="margin-bottom:64px">About</h1>
+            <p>The cuisine of a region is intrinsically integrated into the history and culture of the region.</p>
+              <p>
+                Bengali cuisine is one of the most eclectic of Indian regional cuisines and has been open to foreign
+                influences for more than 800 years.
+              </p>
+              <p>
+                Turks, Afghans, Mughuls, British, Portuguese, French, Danish, Dutch, Armenians,
+                Chinese and other settlers have played a role in the gastronomical legacy of Bengali cuisine.Though the civilization of
+                undivided Bengal is 4000 years old, not much is known about the cuisine of the early period, except
+                for rice being a staple.
+              </p>
+              <p>
+                Over the centuries Bengali cuisine has incorporated a wide range of vegetables, fish, meat and
+                spices and different preparation styles - sheddho (boliled), bata (paste), pora (barbecued),
+                bhapa (steamed), bhaja (fried) and jhol-jhal-shorshe (curried).
+              </p>
+              <p>
+                A protocol of having a typical Bengali meal has evolved traditionally starting with a bitter preparation
+              and ending with sweets.
+            </p>​
+            <p><strong>The Chef?</strong> Mr. Sabyasachi(the owner) himself<img src="https://i0.wp.com/pikturenama.com/wp-content/uploads/2019/07/the-happy-chef.jpg?resize=675%2C675&ssl=1" style="width:150px"
+                    class="w3-circle w3-right" alt="Chef"></p>
+            <h1><b>Opening Hours</b></h1>
+
+            <div class="w3-row">
+                <div class="w3-col s6">
+                    <p>Mon & Tue CLOSED</p>
+                    <p>Wednesday 10.00 - 24.00</p>
+                    <p>Thursday 10:00 - 24:00</p>
+                </div>
+                <div class="w3-col s6">
+                    <p>Friday 10:00 - 12:00</p>
+                    <p>Saturday 10:00 - 23:00</p>
+                    <p>Sunday Closed</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+        <!-- Menu Container -->
+        <div class="w3-container w3-black w3-padding-64 w3-xxlarge" id="menu">
+            <div class="w3-content">
+
+                <h1 class="w3-center w3-jumbo" style="margin-bottom:64px">THE MENU</h1>
+                <div class="w3-row w3-center w3-border w3-border-dark-grey">
+                    <a href="javascript:void(0)" onclick="openMenu(event, 'Starter');" id="myLink">
+                        <div class="w3-col s4 tablink w3-padding-large w3-hover-red">Starter</div>
+                    </a>
+                    <a href="javascript:void(0)" onclick="openMenu(event, 'Salads');">
+                        <div class="w3-col s4 tablink w3-padding-large w3-hover-red">Salads</div>
+                    </a>
+                    <a href="javascript:void(0)" onclick="openMenu(event, 'Main Course');">
+                        <div class="w3-col s4 tablink w3-padding-large w3-hover-red">Main Course</div>
+                    </a>
+                    <a href="javascript:void(0)" onclick="openMenu(event, 'Dessert');">
+                        <div class="w3-col s4 tablink w3-padding-large w3-hover-red">Dessert</div>
+                    </a>
+                    <label for="site-search">Search the food:</label>
+                    <input type="search" id="menu" name="food">
+                    <button>Search</button>
+                </div>
+
+                <div id="Starter" class="w3-container menu w3-padding-32 w3-white">
+                    <h1><b>Bhaja of the Day</b> <span class="w3-right w3-tag w3-dark-grey w3-round"><input type="checkbox"></span></h1>
+                    <hr>
+
+                    <h1><b>Chop of the Day</b> <span class="w3-right w3-tag w3-dark-grey w3-round"><input type="checkbox"></span></span></h1>
+                    <hr>
+
+                    <h1><b>Hara Vara Kabab</b> <span class="w3-right w3-tag w3-dark-grey w3-round"><input type="checkbox"></span></h1>
+                    <hr>
+
+                    <h1><b>Fish Chop/Mutton Chop</b> <span class="w3-right w3-tag w3-dark-grey w3-round"><input type="checkbox"></span></h1>
+                    <hr>
+
+                    <h1><b>Stuffed Egg Chop</b> <span class="w3-tag w3-red w3-round">Hot!</span><span
+                            class="w3-right w3-tag w3-dark-grey w3-round"><input type="checkbox"></span></h1>
+                    <hr>
+
+                    <h1><b>Vekti Fish Fry</b> <span class="w3-tag w3-grey w3-round">New</span><span
+                            class="w3-right w3-tag w3-dark-grey w3-round"><input type="checkbox"></span></h1>
+                </div>
+
+                <div id="Dessert" class="w3-container menu w3-padding-32 w3-white">
+                  <h1><b>Misti Doi</b> <span class="w3-right w3-tag w3-dark-grey w3-round"><input type="checkbox"></span></h1>
+                  <hr>
+
+                  <h1><b>Aam Doi</b> <span class="w3-right w3-tag w3-dark-grey w3-round"><input type="checkbox"></span></h1>
+                  <hr>
+
+                  <h1><b>Rabri</b> <span class="w3-right w3-tag w3-dark-grey w3-round"><input type="checkbox"></span></h1>
+                  <hr>
+
+                  <h1><b>Roshomalai(2 Pcs)</b> <span class="w3-right w3-tag w3-dark-grey w3-round"><input type="checkbox"></span></h1>
+                  <hr>
+
+                  <h1><b>Baked Roshogolla</b> <span class="w3-right w3-tag w3-dark-grey w3-round"><input type="checkbox"></span></h1>
+                  <hr>
+                </div>
+
+                <div id="Salads" class="w3-container menu w3-padding-32 w3-white">
+                    <h1><b>Lasagna</b> <span class="w3-tag w3-grey w3-round">Popular</span> <span
+                            class="w3-right w3-tag w3-dark-grey w3-round"><input type="checkbox"></span></h1>
+                    <hr>
+
+                    <h1><b>Ravioli</b> <span class="w3-right w3-tag w3-dark-grey w3-round"><input type="checkbox"></span></h1>
+                    <hr>
+
+                    <h1><b>Spaghetti Classica</b> <span class="w3-right w3-tag w3-dark-grey w3-round"><input type="checkbox"></span></h1>
+                    <hr>
+
+                    <h1><b>Seafood pasta</b> <span class="w3-right w3-tag w3-dark-grey w3-round"><input type="checkbox"></span></h1>
+                </div>
+
+
+                <div id="Main Course" class="w3-container menu w3-padding-32 w3-white">
+                    <h1><b>Today's Soup</b> <span class="w3-tag w3-grey w3-round">Seasonal</span><span
+                            class="w3-right w3-tag w3-dark-grey w3-round"></span></h1>
+                    <p class="w3-text-grey">Ask the waiter</p>
+                    <hr>
+
+                    <h1><b>Steamed Fish & Prawn</b> <span class="w3-right w3-tag w3-dark-grey w3-round"><input type="checkbox" name="" id=""></span></h1>
+                    <p class="w3-text-grey">preparation of coriander flavours in banana leaf wrapping</p>
+                    <hr>
+
+                    <h1><b>chicken curry</b> <span class="w3-right w3-tag w3-dark-grey w3-round"><input type="checkbox"></span></h1>
+                    <hr>
+
+                    <h1><b>mutton curry</b> <span class="w3-right w3-tag w3-dark-grey w3-round"><input type="checkbox"></span></h1>
+
+                    <h1><b>vegetable of the day</b> <span class="w3-right w3-tag w3-dark-grey w3-round"><input type="checkbox"></span></h1>
+                    <hr>
+
+                    <h1><b>Sukto</b> <span class="w3-right w3-tag w3-dark-grey w3-round"><input type="checkbox"></span></h1>
+                    <p class="w3-text-grey">Traditional bitter mixed vegetables normally taken as a start of a meal</p>
+                    <hr>
+
+                    <h1><b>Dhokar Dalna</b> <span class="w3-right w3-tag w3-dark-grey w3-round"><input type="checkbox"></span></h1>
+                    <p class="w3-text-grey">Mashed lentil cubes in a Traditional tomato and cumin flavoured curry</p>
+                    <hr>
+
+                    <h1><b>Kadai Paneer</b> <span class="w3-right w3-tag w3-dark-grey w3-round"><input type="checkbox"></span></h1>
+                    <hr>
+
+                    <h1><b>Palak Paneer</b> <span class="w3-right w3-tag w3-dark-grey w3-round"><input type="checkbox"></span></h1>
+                    <hr>
+                </div><br>
+
+                <p><button class="w3-button w3-light-grey w3-block" type="submit">ADD TO THE BUCKET</button></p>
+                <p><button class="w3-button w3-light-grey w3-block" type="reset">RESET</button></p>
+            </div>
+        </div>
+
+<!-- Book a Taable -->
+<div class="w3-container w3-padding-64 w3-blue-grey w3-grayscale-min w3-xlarge" id="table">
+    <div class="w3-content">
+        <h1 class="w3-center w3-jumbo" style="margin-bottom:64px">Book a Table</h1>
+        <p>Call us at +91 953-778-2680 </p>
+        <p><span class="w3-tag">FYI!</span> We offer full-service catering for any event, large or small. We
+            understand your needs and we will cater the food to satisfy the biggerst criteria of them all, both look
+            and taste.</p>
+        <p class="w3-xxlarge"><strong>Reserve</strong> a table, ask for today's special or just send us a message:
+        </p>
+        <form action="/action_page.php" target="_blank">
+            <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Name" required name="Name">
+            </p>
+            <p><input class="w3-input w3-padding-16 w3-border" type="number" placeholder="How many people" required
+                    name="People"></p>
+            <p><input class="w3-input w3-padding-16 w3-border" type="password" placeholder="Password" required name="Password"></p>
+            <p><input class="w3-input w3-padding-16 w3-border" type="datetime-local" placeholder="Date and time"
+                    required name="date" value="2020-11-16T20:00"></p>
+            <p>Submit your Photo ID <input class="w3-input w3-padding-16 w3-border" type="file"></p>
+            <p><input type="hidden"></p>
+            <p><input class="w3-input w3-padding-16 w3-border" type="text"
+                    placeholder="Message \ Special requirements" required name="Message"></p>
+            <p><button class="w3-button w3-light-grey w3-block" type="submit">SEND MESSAGE</button></p>
+        </form>
+    </div>
+</div>
+
+    <!-- Image of location/map -->
+    <img src="https://www.w3schools.com/w3images/map.jpg" class="w3-image w3-greyscale" style="width:100%;" id="myMap">
+
+    <!-- Contact -->
+    <div class="w3-container w3-padding-64 w3-blue-grey w3-grayscale-min w3-xlarge">
+        <div class="w3-content">
+            <h1 class="w3-center w3-jumbo" style="margin-bottom:64px">Contact</h1>
+            <form>
+              <fieldset>
+                <legend>Personal Details</legend>
+                <p>
+                  <label>
+                    <br />
+                    <select name="salutation">
+                      <option>--None--</option>
+                      <option>Mr.</option>
+                      <option>Ms.</option>
+                      <option>Mrs.</option>
+                      <option>Dr.</option>
+                      <option>Prof.</option>
+                    </select>
+                  </label>
+                </p>
+                <p>
+                  <label>First name: <input name="firstName" /></label>
+                </p>
+                <p>
+                  <label>Last name: <input name="lastName" /></label>
+                </p>
+                <p>
+                  <label>Ph.Number: <input type="tel"></label>
+                </p>
+                <p>
+                  Gender :
+                  <label><input type="radio" name="gender" value="male" /> Male</label>
+                  <label><input type="radio" name="gender" value="female" /> Female</label>
+                </p>
+                <p>
+                  <label>Email:<input type="email" name="email" /></label>
+                </p>
+                <p>
+                  <label>Date of Birth:<input type="date" name="birthDate"></label>
+                </p>
+                <p>
+                  <label>
+                    Address :
+                    <br />
+                    <textarea name="address" cols="30" rows="3"></textarea>
+                  </label>
+                </p>
+                <p>
+                  <button type="submit">Submit</button>
+                </p>
+              </fieldset>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Tabbed Menu
+        function openMenu(evt, menuName) {
+            var i, x, tablinks;
+            x = document.getElementsByClassName("menu");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablink");
+            for (i = 0; i < x.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" w3-red", "");
+            }
+            document.getElementById(menuName).style.display = "block";
+            evt.currentTarget.firstElementChild.className += " w3-red";
+        }
+        document.getElementById("myLink").click();
+    </script>
+
+</body>
+
+</html>
